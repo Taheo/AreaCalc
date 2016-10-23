@@ -18,6 +18,7 @@ namespace ConsoleApplication1
             // wsrod opcji ma byc taka ktora pozwala na zamkniecie apki
             // pole powierzchni ma byc wyznaczane za pomoca dedykowanych metod dla kazdej byly
             //------
+
         }
     }
 }
