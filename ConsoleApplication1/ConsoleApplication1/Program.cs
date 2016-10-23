@@ -20,19 +20,60 @@ namespace ConsoleApplication1
             Console.WriteLine("");
         }
 
+        public static double Poleprosto(double a, double b, double h)
+        {
+            return 2*(a * b + b * h + a * h);
+        }
+
+        public static double Objprosto(double a, double b, double h)
+        {
+            return a*b*h;
+        }
+
+        public static void Switcher(int willbeswitchnum)
+        {
+            
+            switch (willbeswitchnum)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    Console.WriteLine("Policzę pole stożka ");
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    Console.WriteLine("Policzę pole walca");
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    Console.WriteLine("Policzę pole kuli");
+                    break;
+                case 4:
+                    Console.WriteLine("");
+                    Console.WriteLine("Policzę pole prostopadłościanu");
+                    Console.WriteLine("Podaj a");
+                    double a = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Podaj b");
+                    double b = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Podaj c");
+                    double c = double.Parse(Console.ReadLine());
+                    Console.WriteLine($"Pole prostopadłościanu = {Poleprosto(a, b, c)}");
+                    break;
+                case 5:
+                    Console.WriteLine("");
+                    Console.WriteLine("Policzę pole ostrosłupa");
+                    break;
+                default:
+                    Console.WriteLine("");
+                    Console.WriteLine("default...");
+                    break;
+            }
+        }
+
         static void Main(string[] args)
         {
-            RysujMenu();   
-            //2.napisz apke do lcizenia pola powierzchi oraz objetosci bryl takich jak stozek, walec, kula, prostopadloscian, ostroslup o podstawie prostokatnej
-            // sklad programu powinno wchodzic 
-            // generowanie menu z wyborem bryly
-            // po zakonczeniu obliczen menu ponownie ma byc wyswietlone
-            // wsyzstkei dane wczytujemy od uzytkownika
-            // wsrod opcji ma byc taka ktora pozwala na zamkniecie apki
-            // pole powierzchni ma byc wyznaczane za pomoca dedykowanych metod dla kazdej byly
-            //------
-
-      
+            RysujMenu();
+            int switchnum = int.Parse(Console.ReadLine());
+            Switcher(switchnum);
 
         }
     }
